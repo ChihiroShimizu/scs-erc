@@ -1,0 +1,32 @@
+{
+  "status": "CPU_checks_passed",
+  "tests_passed": 7,
+  "annotation_targets": 1500,
+  "unique_annotated_dialogues": 866,
+  "teacher_train_targets_required_on_server": 1200,
+  "teacher_calibration_targets_required_on_server": 300,
+  "branch_training_records_required": 3600,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "server_core_modified": false,
+  "server_required_module": "pfa_erc.training.llm_evidence_supervision_stage7",
+  "server_required_core_version": "2.0.0",
+  "GPU_training_executed_here": false,
+  "real_server_dataset_alignment_checked_here": false,
+  "shell_exit_status_success_and_failure_checked": true,
+  "python_and_shell_syntax_checked": true,
+  "implementation_files_sha256": {
+    "config.yaml": "1fb95806d7f6847d349db51bcda75c21a3ecc16c0fe6caef569b9edf2b70805b",
+    "data_checks.py": "681cb9dae7ca338761f2205ebbd6a739152887fa998a508e5ac7acb975d5d8dc",
+    "launch_tmux.sh": "ed4b93c15ae8db21eabd2d7304c77bffbf0849c19214120d59e95d8841c411cc",
+    "run.sh": "2a357fb2756625ae8701458b99d6534a8560e065224a32728b2079a80003668e",
+    "run_stage7r.py": "c220fdeccbdd874c350a41f7ebfce424fc3acd17d2fd4cda999dcd11a589ab09",
+    "statistics_report.py": "1824929114adff20b8079f0320190b79f0d629592892a3b5d44ccac13318c614",
+    "tests/test_stage7r.py": "0588796b6af1637a594fd8f7501da6d4f0dc8b0dfe96339e9684dc9e72f905b4"
+  }
+}

@@ -1,0 +1,66 @@
+# New experiment only. Existing Stage7 files are not overwritten.
+data:
+  dataset: meld
+  processed_dir: data/processed/meld
+llm_evidence_supervision_stage7:
+  dataset: meld
+  processed_dir: data/processed/meld
+  labels:
+  - anger
+  - disgust
+  - fear
+  - joy
+  - neutral
+  - sadness
+  - surprise
+  model_name: Qwen/Qwen2.5-7B-Instruct
+  dtype: bfloat16
+  trust_remote_code: false
+  local_files_only: false
+  enable_thinking: false
+  teacher_annotation_file: MELD_Stage7R_run1500_v1/data/teacher_final.jsonl
+  expected_teacher_records: 1500
+  expected_teacher_sha256: d3c49e461e6359fb46c3453a3509761a373b2c5d50dfcbb11ac1e076da430686
+  artifact_dir: artifacts/llm_evidence_supervision_stage7r1500/meld
+  seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  split_seed: 2026
+  calibration_dialogue_fraction: 0.1
+  shuffle_control_seed: 2077
+  max_sequence_tokens: 1024
+  micro_batch_size: 1
+  gradient_accumulation_steps: 16
+  gradient_checkpointing: true
+  emotion_base_max_steps: 600
+  branch_max_steps: 480
+  emotion_base_learning_rate: 2.0e-05
+  branch_learning_rate: 1.0e-05
+  warmup_steps: 20
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  log_every_steps: 10
+  emotion_replay_per_teacher: 1
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+  inference_batch_size: 2
+  planner_max_new_tokens: 192
+  classification_tolerance: 0.003
+  minimum_parse_success: 0.98
+  minimum_context_ap: 0.55
+  minimum_evidence_accuracy: 0.45
+  bootstrap_samples: 10000
+  bootstrap_seed: 20261021
+  permutation_samples: 100000

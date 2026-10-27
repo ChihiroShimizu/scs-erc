@@ -1,0 +1,69 @@
+[
+  {
+    "source_zip": "JOB_01_checkpoint_001.zip",
+    "sha256": "792485e089814edd82c4764ef9797f670c26c1a05f6eb9923119d1c8f904bdf3",
+    "audit_member": "JOB_01_results/audits_001.jsonl",
+    "annotation_member": "JOB_01_results/annotations_001.jsonl",
+    "targets": 300,
+    "reported_runtime": [
+      {
+        "file": "JOB_01_results/runtime_001.json",
+        "content": {
+          "job": "JOB_01",
+          "scope": "all 21 original source batches",
+          "model_family_reported_by_system": "GPT-6",
+          "exact_execution_model_identifier": null,
+          "model_note": "Exact runtime model identifier is not exposed; no guessed variant is claimed.",
+          "prompt_revision": "meld-stage7r-v1.1",
+          "execution_method": "First batch restored from its saved result. Each remaining batch uses a new independent worker request with no inherited conversation and only its own source input. Coordinator validates structure and concatenates outputs.",
+          "self_audit_method": "Internal model review restricted to each batch own source and candidate annotations. Interrupted raw initials may be audited in a fresh isolated request. At most one complete reannotation per initial failing record.",
+          "independent_semantic_verification": false,
+          "completed_at_utc": "2026-10-21T05:04:51.126184+00:00",
+          "timezone": "Asia/Tokyo",
+          "recovery_note": "Previous interrupted-run scratch artifacts after batch 001 were unavailable on 2026-10-21 and were regenerated; no unavailable earlier results are counted.",
+          "raw_outputs": [
+            "raw/initial_annotations_001.jsonl",
+            "raw/reannotations_001.jsonl",
+            "raw/self_audits_001.jsonl"
+          ],
+          "source_note": "Source archive bytes, train-prefixed identities and causal history windows were checked. Official provenance declared by supplied prompts was not independently externally verified.",
+          "merged_source_note": "Archival concatenation only; never supplied as one large annotation model request.",
+          "resumption_note": "Preserved raw initials are never regenerated solely because a worker was interrupted; available initial outputs and per-batch runtime reports are retained.",
+          "raw_output_note": "Complete structured authored outputs are retained before packaging, separately from execution metadata. No hidden reasoning or provider token trace is claimed."
+        }
+      }
+    ]
+  },
+  {
+    "source_zip": "JOB_02_consolidated_002_results.zip",
+    "sha256": "61bd7916cd00fb069a4f5f3d51c0cf4d001f7b492a0e32b980631f00265770a4",
+    "audit_member": "audits_002.jsonl",
+    "annotation_member": "annotations_002.jsonl",
+    "targets": 300,
+    "reported_runtime": []
+  },
+  {
+    "source_zip": "JOB_03_results.zip",
+    "sha256": "15f94b380a3da5ba582d46f3598bb2da9e158a532710d7afc75c4369706913d3",
+    "audit_member": "JOB_03_results/audits_all.jsonl",
+    "annotation_member": "JOB_03_results/annotations_all.jsonl",
+    "targets": 300,
+    "reported_runtime": []
+  },
+  {
+    "source_zip": "JOB_04_results.zip",
+    "sha256": "13a1d8c2c371a2411d792062cf289cc26f0303985535a5acf2cc0b67db5c6973",
+    "audit_member": "JOB_04_results/audits_004.jsonl",
+    "annotation_member": "JOB_04_results/annotations_004.jsonl",
+    "targets": 300,
+    "reported_runtime": []
+  },
+  {
+    "source_zip": "JOB_05_results.zip",
+    "sha256": "d3bb7df0f865bfb62ad416ac5dc5ff6e4f2c08137e84521d7956c5790155e808",
+    "audit_member": "JOB_05_results/audits_005.jsonl",
+    "annotation_member": "JOB_05_results/annotations_005.jsonl",
+    "targets": 300,
+    "reported_runtime": []
+  }
+]

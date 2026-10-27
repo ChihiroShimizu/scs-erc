@@ -1,0 +1,21 @@
+{
+  "status": "passed_structural_checks",
+  "targets": 1500,
+  "dialogues": 866,
+  "context_need": {
+    "current_sufficient": 931,
+    "history_helpful": 256,
+    "history_required": 129,
+    "ambiguous": 184
+  },
+  "audit_actions": {
+    "kept": 1376,
+    "reannotated": 124
+  },
+  "independent_semantic_verification": false,
+  "files_sha256": {
+    "source_inputs.jsonl": "0131b6c38978d02e59a53bf27491a464d70d32ffd89370209e02f3bb6fca5651",
+    "teacher_final.jsonl": "d3c49e461e6359fb46c3453a3509761a373b2c5d50dfcbb11ac1e076da430686",
+    "teacher_audits.jsonl": "dbd0436b71978426ba66348b70e758d0ae1ccac3d259d6e685f002ae556d94ea"
+  }
+}
